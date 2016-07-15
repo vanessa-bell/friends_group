@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Edit {{friend.first_name}}'s profile</title>
+</head>
+<body>
+	<table>
+		<thead>
+			<th>first name</th>
+			<th>last name</th>
+			<th>friends since</th>
+		</thead>
+		<tbody>
+			<tr>
+				<td>{{friend.first_name}}</td>
+				<td>{{friend.last_name}}</td>
+				<td>{{friend.created_at}}</td>
+			</tr>
+		</tbody>
+	</table>
+	<h3>Edit {{friend.first_name}}'s profile</h3>
+	<form action='/update/{{friend.id}}' method='post'>
+		First Name: <input type='text' name='first_name' value='{{friend.first_name}}'>
+		Last Name: <input type='text' name='last_name' value='{{friend.last_name}}'>
+		Email: <input type='text' name='email' value='{{friend.email}}'>
+		<input type='submit' value='Edit'>
+	</form>
+</body>
+</html>

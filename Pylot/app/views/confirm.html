@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Delete Friend</title>
+</head>
+<body>
+	<h1>Are you sure you would like to Delete this friend?</h1>
+	<form action="/delete/{{friend.id}}" method='post'>
+		<input type="submit" value="delete">
+	</form>
+	<form action="/">
+		<input type="submit" value="no, go back">
+	</form>
+</body>
+</html>
